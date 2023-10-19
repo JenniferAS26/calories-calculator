@@ -26,29 +26,88 @@
           <h3 class="section-title">¿Cúal es tu género?</h3>
           <div class="genre-wrapper">
             <div class="genre-wrapper__person">
-              <img class="genre-wrapper__person--image" src="./src/assets/images/woman.jpg" alt="woman doing yoga illustration">
-              <input class="genre-wrapper__person--input" type="radio" id="" >
+              <div class="genre-wrapper__person--image-container">
+                <img class="image" src="./src/assets/images/woman.jpg" alt="woman doing yoga illustration">
+              </div>
+              <div class="input-wrapper">
+                <input class="genre-wrapper__person--input" type="radio" id="woman-input" name="genre" value="woman" >
+                <label for="woman-input">Mujer</label>
+              </div>
             </div>
             <div class="genre-wrapper__person">
-              <img class="genre-wrapper__person--image" src="./src/assets/images/man.jpg" alt="woman doing yoga illustration">
-              <input class="genre-wrapper__person--input" type="radio" id="" >
+              <div class="genre-wrapper__person--image-container">
+                <img class="image" src="./src/assets/images/man.jpg" alt="woman doing yoga illustration">
+              </div>
+              <div class="input-wrapper">
+                <input class="genre-wrapper__person--input" type="radio" id="man-input" name="genre" value="men" >
+                <label for="man-input">Hombre</label>
+              </div>
             </div>
           </div>
         </div>
-        <div class="calculator__form--age">
-          <h3 class="section-title">¿Cuántos años tienes?</h3>
-          <input class="section-input" type="number" placeholder="21" id="age-input">
-          <label class="age-label label" for="age-input">años</label>
+        <div class="middle-wrapper">
+          <div class="calculator__form--cards age">
+            <label class="age-label label" for="age-input">
+              <h3 class="subsection-title title-age">Edad</h3>
+              (años)
+            </label>
+            <input class="section-input" type="number" placeholder="21" id="age-input">
+          </div>
+          <div class="calculator__form--cards height">
+            <label class="height-label label" for="height-input">
+              <h3 class="subsection-title title-height">Estatura</h3>
+              (cm)
+            </label>
+            <input class="section-input" type="number" placeholder="160" id="height-input">
+          </div>
+          <div class="calculator__form--cards weight">
+            <label class="weight-label label" for="weight-input">
+              <h3 class="subsection-title title-weight">Peso</h3>
+              (kg)
+            </label>
+            <input type="number" placeholder="71" id="weight-input">
+          </div>
         </div>
-        <div class="calculator__form--height">
-          <h3 class="section-title">¿Cuánto mides?</h3>
-          <input class="section-input" type="number" placeholder="160" id="height-input">
-          <label class="label" for="height-input">cm</label>
-        </div>
-        <div>
-          <h3 class="section-title">¿Cuánto pesas?</h3>
-          <input type="number" placeholder="71" id="weight-input">
-          <label for="weight-input">kg</label>
+        <div class="calculator__form--activities">
+          <h3 class="section-title">¿Con cuanta frecuencia haces actividad física?</h3>
+          <div class="activities-wrapper">
+            <div class="activities-wrapper__activity sit">
+              <img class="activities-wrapper__activity--image" src="./src/assets/images/sit.jpg" alt="person sitting in a chair illustration">
+              <div class="container">
+                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="sit-input" value="nothing">
+                <label class="activities-wrapper__activity--label" for="sit-input">Nada</label>
+              </div>
+            </div>
+            <div class="activities-wrapper__activity walk">
+              <img class="activities-wrapper__activity--image" src="./src/assets/images/walk.jpg" alt="woman walking a dog illustration">
+              <div class="container">
+                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="walk-input" value="light">
+                <label class="activities-wrapper__activity--label" for="walk-input">Ligero</label>
+              </div>
+            </div>
+            <div class="activities-wrapper__activity run">
+              <img class="activities-wrapper__activity--image" src="./src/assets/images/run.jpg" alt="woman running illustration">
+              <div class="container">
+                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="run-input" value="moderate">
+                <label class="activities-wrapper__activity--label" for="run-input">Moderado</label>
+              </div>
+            </div>
+            <div class="activities-wrapper__activity bike">
+              <img class="activities-wrapper__activity--image" src="./src/assets/images/bike.jpg" alt="woman riding a bike illustration">
+              <div class="container">
+                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="bike-input" value="regular">
+                <label class="activities-wrapper__activity--label" for="bike-input">Regular</label>
+              </div>
+            </div>
+            <div class="activities-wrapper__activity athlete">
+              <img class="activities-wrapper__activity--image" src="./src/assets/images/athete.jpg" alt="woman in a kayak illustration">
+              <div class="container">
+                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="kayak-input" value="athlete">
+                <label class="activities-wrapper__activity--label" for="kayak-input">Deportista</label>
+              </div>
+            </div>
+            <button class="activities-wrapper__button" type="submit">Calcular</button>
+          </div>
         </div>
       </form>
     </section>

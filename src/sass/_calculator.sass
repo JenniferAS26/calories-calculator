@@ -2,36 +2,170 @@
 @use './_mixins' as *
 
 .calculator 
-  @include containerStyle($width: 100%, $height: 100%, $padding-top-bottom: 25px, $padding-right-left: 20px)
+  @include containerStyle($width: 100%, $height: 100%, $padding-top-bottom: 10px, $padding-right-left: 10px)
   display: none
   justify-items: center
   align-items: center
-  grid-template-rows: 80px 60px 1fr
+  grid-template-rows: 60px 40px 743px
+  gap: 10px
   &__title
-    font-size: 3rem
+    font-size: 2.5rem
     text-align: center
     line-height: 30px
   &__text
     font-size: 1.4rem
+    text-align: center
     color: $secondary-text-color
   &__form 
     width: 100%
-    height: 100%
+    height: 743px
     display: grid
+    grid-template-rows: 240px 173px 300px
+    align-items: center
+    justify-items: center
     &--genre
       width: 100%
-      height: 250px
+      height: 100%
+      display: grid
+      grid-template-rows: 50px 200px
+      align-items: center
       .genre-wrapper
         width: 100%
         height: 100%
         @include flexCenter(row, center, center)
-        gap: 20px
-        &__person 
-          width: 150px
-          height: 200px
-          border-radius: 20px
-          &--image
+        &__person
+          width: 100%
+          height: 100%
+          display: grid
+          justify-items: center
+          align-items: center
+          grid-template-rows: 160px 40px
+          &--image-container
+            width: 120px
+            height: 150px
+            border-radius: 10px
+            .image
+              width: 100%
+              height: 100%
+              object-fit: cover
+              border-radius: 10px
+          .input-wrapper
             width: 100%
             height: 100%
+            @include flexCenter(row, center, center)
+            gap: 10px 
+          &--input
+            width: 20px
+            height: 20px
+          label
+            font-size: 1.6rem
+            color: $primary-text-color
+            font-weight: $medium-weight
+    .middle-wrapper
+      width: 100%
+      height: 143px
+      @include flexCenter(row, space-between, center)
+    &--cards
+      width: 110px
+      height: 100%
+      border-radius: 20px
+      display: grid
+      justify-items: center
+      align-items: center
+      align-content: center
+      gap: 20px
+      label
+        text-align: center
+      .subsection-title
+        font-size: 1.7rem
+      input
+        width: 60px
+        height: 30px
+        padding: 10px
+        border: none
+        border-radius: 5px
+        text-align: center
+    .age
+      background-color: $section-color-1
+      .age-label
+        color: $label-color
+      input 
+        background-color: $input-color-3
+        color: $button-color
+        font-weight: $bold-weight
+        &::placeholder
+          color: inherit
+        &:focus
+          outline: 2px solid $button-color
+    .height
+      background-color: $section-color-2
+      .height-label
+        color: $quaternary-color
+      input 
+        background-color: $input-color-1
+        color: $quaternary-color
+        font-weight: $bold-weight
+        &::placeholder
+          color: inherit
+        &:focus
+          outline: 2px solid $quaternary-color
+    .weight
+      background-color: $section-color-3
+      .weight-label
+        color: $tertiary-text-color
+      input 
+        background-color: $input-color-2
+        color: $tertiary-text-color
+        font-weight: $bold-weight
+        &::placeholder
+          color: inherit
+        &:focus
+          outline: 2px solid $tertiary-text-color
+    &--activities
+      width: 100%
+      height: 100%
+      display: grid
+      grid-template-rows: 50px 250px
+      gap: 10px
+      .activities-wrapper
+        width: 100%
+        height: 250px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: auto
+        &__activity
+          width: 100%
+          height: 100%
+          display: grid
+          justify-items: center
+          align-items: center
+          &--image
+            width: 80px
+            height: 80px
             object-fit: cover
-            border-radius: 20px
+            border-radius: 50%
+          .container
+            width: 100%
+            height: 100%
+            @include flexCenter(row, center, center)
+            gap: 10px
+          &--input
+            width: 15px
+            height: 15px
+          &--label
+            font-size: 1.4rem
+            color: $primary-text-color
+        &__button
+          width: 100px
+          height: 30px
+          justify-self: flex-end
+          align-self: flex-end
+          margin-bottom: 20px
+          @include buttonStyle(100px, 30px, 10px, 1.4rem, $button-color, $bg-color)
+  .section-title
+    font-size: 1.8rem
+    text-align: center
+
+input[type="number"] 
+  &:focus::-webkit-inner-spin-button, &:hover::-webkit-inner-spin-button 
+    display: none
