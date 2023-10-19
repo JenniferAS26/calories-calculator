@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Calorias</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+<body>
+  <main class="wrapper">
+    <section class="welcome">
+      <div class="welcome__info-container">
+        <h1 class="welcome__info-container--title">Calculadora de calorias</h1>
+        <span class="welcome__info-container--text">¿Quieres saber cuantas calorias debes consumir al día?</span>
+      </div>
+      <div class="welcome__image-container">
+        <img class="welcome__image-container--image" src="./src/assets/images/hero-1.jpg" alt="woman doing yoga draw">
+      </div>
+      <button class="welcome__button">Empecemos</button>
+    </section>
+    <section class="calculator">
+      <h2 class="calculator__title">Calcular calorías diarias</h2>
+      <p class="calculator__text">Para hacer un cálculo correcto necesitamos un poco de informaición básica</p>
+      <form class="calculator__form">
+        <div class="calculator__form--genre">
+          <h3 class="section-title">¿Cúal es tu género?</h3>
+          <div class="genre-wrapper">
+            <div class="genre-wrapper__person">
+              <img class="genre-wrapper__person--image" src="./src/assets/images/woman.jpg" alt="woman doing yoga illustration">
+              <input class="genre-wrapper__person--input" type="radio" id="" >
+            </div>
+            <div class="genre-wrapper__person">
+              <img class="genre-wrapper__person--image" src="./src/assets/images/man.jpg" alt="woman doing yoga illustration">
+              <input class="genre-wrapper__person--input" type="radio" id="" >
+            </div>
+          </div>
+        </div>
+        <div class="calculator__form--age">
+          <h3 class="section-title">¿Cuántos años tienes?</h3>
+          <input class="section-input" type="number" placeholder="21" id="age-input">
+          <label class="age-label label" for="age-input">años</label>
+        </div>
+        <div class="calculator__form--height">
+          <h3 class="section-title">¿Cuánto mides?</h3>
+          <input class="section-input" type="number" placeholder="160" id="height-input">
+          <label class="label" for="height-input">cm</label>
+        </div>
+        <div>
+          <h3 class="section-title">¿Cuánto pesas?</h3>
+          <input type="number" placeholder="71" id="weight-input">
+          <label for="weight-input">kg</label>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./src/scripts/navigation.js"></script>
+</body>
+</html>
