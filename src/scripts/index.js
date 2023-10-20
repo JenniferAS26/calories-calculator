@@ -25,17 +25,32 @@ const calculateCalories = (activity, genre, age, height, weight) => {
   }
 }
 
+const messageContainer = document.querySelector('.message')
 const form = document.querySelector('.calculator__form')
+const name = document.querySelector('#name-input')
+const genreInput = document.querySelector('input[name="genre"]:checked')
+const activityInput = document.querySelector('input[name="activity"]:checked')
+const age =  document.querySelector('#age-input')
+const height =  document.querySelector('#height-input')
+const weight =  document.querySelector('#weight-input')
+let ageRange = ''
 
 form.addEventListener('submit', event => {
   event.preventDefault()
-  const name = document.querySelector('#name-input').value
-  const genreInput = document.querySelector('input[name="genre"]:checked').value
-  const activityInput = document.querySelector('input[name="activity"]:checked').value
-  const age =  document.querySelector('#age-input').value
-  const height =  document.querySelector('#height-input').value
-  const weight =  document.querySelector('#weight-input').value
-  const caloriesPerDay = calculateCalories(activityInput, genreInput, age, height, weight)
-  console.log(caloriesPerDay)
+  const caloriesPerDay = calculateCalories(activityInput.value, genreInput.value, age.value, height.value, weight.value)
+  if (age.value >= 15 && age.value <= 29) {
+    ageRange = 'Joven'
+  } else if (age.value >= 30 && age.value <= 59){
+    ageRange = 'adultos'
+  } else if (age.value >= 60) {
+    ageRange = 'adultos mayores'
+  }
+  messageContainer.style.display = 'grid'
+  messageContainer.innerHTML = `
+    <div class="message__info">
+      <h2 class="message__info--title">${name.value}</h2>
+      <p class="message__info--text">Usted se encuentra en el grupo poblacional de <span class="population">${ageRange}</span> y las calorías por día que debe consumir son <span class="calories">${caloriesPerDay}</span></p>
+    </div>
+  `
   
 })

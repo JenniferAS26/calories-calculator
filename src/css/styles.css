@@ -29,6 +29,7 @@ body {
   background-color: #FEFAEF;
   border-radius: 20px;
   padding: 10px;
+  position: relative;
 }
 
 .welcome {
@@ -325,6 +326,54 @@ body {
 
 input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-webkit-inner-spin-button {
   display: none;
+}
+
+.message {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6392156863);
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  display: none;
+  justify-items: center;
+  align-items: center;
+}
+.message__info {
+  width: 350px;
+  height: 350px;
+  padding: 20px 20px;
+  background-color: #FEFAEF;
+  border-radius: 20px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 30px;
+  color: #202443;
+}
+.message__info--title {
+  font-size: 3rem;
+}
+.message__info--text {
+  font-size: 1.8rem;
+  line-height: 32px;
+  text-align: center;
+}
+.message__info--text .population {
+  color: #FA8A88;
+  background-color: #FFDAD7;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.message__info--text .calories {
+  color: #026773;
+  background-color: #D6ECFB;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=styles.css.map */
