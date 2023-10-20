@@ -49,7 +49,7 @@ form.addEventListener('submit', event => {
   messageContainer.innerHTML = `
     <div class="message__info">
       <h2 class="message__info--title">${name.value}</h2>
-      <p class="message__info--text">Usted se encuentra en el grupo poblacional de <span class="population">${ageRange}</span> y las calorías por día que debe consumir son <span class="calories">${caloriesPerDay}</span></p>
+      <p class="message__info--text">Usted se encuentra en el grupo poblacional de <span class="population">${ageRange}</span> y las calorías por día que debe consumir son <span class="calories">${Math.round(caloriesPerDay)}</span></p>
     </div>
   `
   
