@@ -16,12 +16,16 @@
       <div class="welcome__image-container">
         <img class="welcome__image-container--image" src="./src/assets/images/hero-1.jpg" alt="woman doing yoga draw">
       </div>
+      <p class="calculator__text">Para hacer un cálculo correcto necesitamos un poco de informaición básica</p>
       <button class="welcome__button">Empecemos</button>
     </section>
     <section class="calculator">
       <h2 class="calculator__title">Calcular calorías diarias</h2>
-      <p class="calculator__text">Para hacer un cálculo correcto necesitamos un poco de informaición básica</p>
       <form class="calculator__form">
+        <div class="calculator__form--user">
+          <label for="name-input" class="section-title">¿Cuál es tu nombre?</label>
+          <input type="text" placeholder="Nombre completo" id="name-input">
+        </div>
         <div class="calculator__form--genre">
           <h3 class="section-title">¿Cúal es tu género?</h3>
           <div class="genre-wrapper">
@@ -30,7 +34,7 @@
                 <img class="image" src="./src/assets/images/woman.jpg" alt="woman doing yoga illustration">
               </div>
               <div class="input-wrapper">
-                <input class="genre-wrapper__person--input" type="radio" id="woman-input" name="genre" value="woman" >
+                <input class="genre-wrapper__person--input" type="radio" id="woman-input" checked="checked" name="genre" value="woman" >
                 <label for="woman-input">Mujer</label>
               </div>
             </div>
@@ -39,7 +43,7 @@
                 <img class="image" src="./src/assets/images/man.jpg" alt="woman doing yoga illustration">
               </div>
               <div class="input-wrapper">
-                <input class="genre-wrapper__person--input" type="radio" id="man-input" name="genre" value="men" >
+                <input class="genre-wrapper__person--input" type="radio" id="man-input" name="genre" value="man" >
                 <label for="man-input">Hombre</label>
               </div>
             </div>
@@ -74,7 +78,7 @@
             <div class="activities-wrapper__activity sit">
               <img class="activities-wrapper__activity--image" src="./src/assets/images/sit.jpg" alt="person sitting in a chair illustration">
               <div class="container">
-                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="sit-input" value="nothing">
+                <input class="activities-wrapper__activity--input" type="radio" name="activity" id="sit-input" value="nothing" checked="checked">
                 <label class="activities-wrapper__activity--label" for="sit-input">Nada</label>
               </div>
             </div>
@@ -114,5 +118,6 @@
   </main>
 
   <script src="./src/scripts/navigation.js"></script>
+  <script src="./src/scripts/index.js"></script>
 </body>
 </html>
